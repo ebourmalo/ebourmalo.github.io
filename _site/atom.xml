@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Emmanuel Bourmalo</title>
+ <link href="http://hyde.getpoole.com/atom.xml" rel="self"/>
+ <link href="http://hyde.getpoole.com/"/>
+ <updated>2014-06-16T00:21:35+02:00</updated>
+ <id>http://hyde.getpoole.com</id>
+ <author>
+   <name>Emmanuel Bourmalo</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>Retours sur la conférence js.everywhere(europe) 2012</title>
+   <link href="http://hyde.getpoole.com/2012/12/02/retours-conference-jseverywhere-europe/"/>
+   <updated>2012-12-02T00:00:00+01:00</updated>
+   <id>http://hyde.getpoole.com/2012/12/02/retours-conference-jseverywhere-europe</id>
+   <content type="html">&lt;h2&gt;La conférence&lt;/h2&gt;
+
+&lt;p&gt;La conférence js.everywhere(europe) s’est déroulée le vendredi 16 et le samedi 17 novembre au Tapis rouge, dans le 10ème arrondissement de Paris. Organisée par la société 4D, la première journée était destinée à faire découvrir son nouveau produit : Wakanda. La seconde journée était quant à elle réservée aux présentations des technologies liées au JavaScript.
+Waka quoi ?
+Wakanda est le nouveau produit développé par 4D, une entreprise connue pour son précédent produit également appelé 4D. Wakanda est, comme sans prédécesseur, une plateforme de developpement All-in-one permettant de développer rapidement des Business Webapp avec une stack full js. 
+Cette plateforme comprend :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Wakanda Server : un serveur web ainsi qu’une base de données intégrée &lt;/li&gt;
+&lt;li&gt;Wakanda Framework : le framework avec ses nombreux widgets &lt;/li&gt;
+&lt;li&gt;Wakanda Studio : l’IDE permettant de gérer le serveur web, d’avoir un support natif du framework au sein de l’éditeur de code et d’avoir l’outil de conception d’UI en drag’n&amp;#39;drop.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Personnellement, les solutions tout en un ne m’ont jamais vraiment emballées. Bien qu’il s’agisse d’un outil open source (core c++) avec une stack fonctionnelle full js, cette plateforme me rappelle Visual Studio et l’environnement .Net. Si vous êtes comme moi pour rester sur des solutions légères et rester maître du code de bout en bout et ce, sans surcouche, passez votre chemin. Cela dit, cette solution peut être une très bonne alternative pour qui veut réaliser une business webapp rapidement.&lt;/p&gt;
+
+&lt;h2&gt;Journée du Vendredi – Wakanday&lt;/h2&gt;
+
+&lt;h4&gt;9.00 – 9.30am : Wakanday Keynote&lt;/h4&gt;
+
+&lt;p&gt;Cette keynote d’ouverture a commencé par une présentation des sponsors de la conférence (Amazon Web Services, Mozilla). Après une présentation des chiffres clés depuis les débuts de Wakanda, le fondateur de 4D, Laurent Ribardière liste les amélioriations de la version 3 :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Envoi d’emails avec pièces jointes simplifié &lt;/li&gt;
+&lt;li&gt;Fonctionnalité de full restore &amp;amp; backup de la webapp (avec les données) &lt;/li&gt;
+&lt;li&gt;Backup journaling &lt;/li&gt;
+&lt;li&gt;Nouvelle structure des pages web &lt;/li&gt;
+&lt;li&gt;Intégration de GitHub &lt;/li&gt;
+&lt;li&gt;Fonctionnalité de connexion à distance d’une autre base de données Wakanda&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On pourra également noter que le process de quality assurance est à base de Jenkins, phantomJS, maven et Sikuli.
+Une première démo nous montre la facilité de créer un modèle de données (2 entités) à l’aide de code js. Dans la vue “Visualisation du modèle” de W. Studio, nous constatons que l’association entre les 2 entités s’est effectuée automatiquement.&lt;/p&gt;
+
+&lt;p&gt;Pour finir, nous assistons à une autre démo live d’une webapp Wakanda à partir d’un modèle de données existant. Quelques minutes et clics plus tard (drag’n&amp;#39;drop), une IHM avec écran splité permettait d’afficher la liste des speakers de la conférence sur la gauche et les différentes sessions de la journée sur la droite à l’aide d’une connexion à distance à un modèle existant avec quelques lignes de js. Le binding data – ui est fait également dans le concepteur d’IHM.&lt;/p&gt;
+
+&lt;h4&gt;9.30 – 10.15 : Utilisation d’un modèle de données distant avec Wakanda&lt;/h4&gt;
+
+&lt;p&gt;Le speaker a mis en avant la fonctionnalité d’exposition automatique du modèle de données pour le front-end puisqu’une architecture REST est automatiquement créée en conséquence.
+Cette présentation nous a permis de voir la simplicité de pouvoir se connecter a un modèle de données existant.&lt;/p&gt;
+
+&lt;h4&gt;10.30 – 11.25 : Create your first business app&lt;/h4&gt;
+
+&lt;p&gt;Démonstration d’une single-page webapp developpée avec wakanda. Les points à retenir : - possibilité de surcharger les CSS générées par le concepteur d’IHM à travers un fichier custom.css. - un objet côté client appelé WAF (Wakanda Ajax Framework) contenant notamment le modèle manipulé. - test avec un modèle de données conséquent (1 million de tuples) affiché sous forme de v-scrolling table. Conclusion : en fonction du scrolling effectué par le user, des requêtes ajax sont envoyées automatiquement au serveur afin de récupérer au fur à mesure les informations du modèle. Un système de cache a également été mis en place pour ne pas envoyer de requêtes inutiles au serveur.&lt;/p&gt;
+
+&lt;h4&gt;11.30 – 12.15 : Building a multi-platform application&lt;/h4&gt;
+
+&lt;p&gt;Démonstration d’une création d’application multi-platforme. Chaque plateforme possède finalement sa propre UI en passant par le concepteur d’IHM de Wakanda mais chaque vue utilise le même modèle et même logique métier. Seule contrainte pour le moment : les widgets graphiques pour la création d’UI mobiles sont orientés iOS. On se retrouve donc avec une interface ios aussi bien sur un iphone que sur un smartphone android ou windows phone.&lt;/p&gt;
+
+&lt;h4&gt;Lunch&lt;/h4&gt;
+
+&lt;p&gt;Mis à part le fait que j’ai loupé la mousse au chocolat pour le dessert, j’ai rencontré Brice A. qui s’occupait notamment du TP HTML5 qui s’est déroulé la journée suivante.&lt;/p&gt;
+
+&lt;h4&gt;Agile development with Wakanda and Javascript&lt;/h4&gt;
+
+&lt;p&gt;Le speaker a montré dans quel contexte il était intéressant de travailler en agile à partir d’un petit exemple amusant auquel j’ai participé. Avec une autre personne du public, nous avons dû écrire 20 fois une phrase du type : “I should definitely work with agile”. Personnellement, je devais l’écrire de manière séquentielle une phrase après l’autre. Quant à elle, elle devait l’écrire de manière itérative soit une rangée du même mot l’une après l’autre. Au bout de 30 secondes, le speaker dit alors : “Stop please, I wanna see what you did.”.&lt;/p&gt;
+
+&lt;p&gt;Bilan : j’avais terminé d’écrire ma troisième phrase et commençais la quatrième. Elle, avait terminé sa première colonne de “I” et commençait celle de “should”. J’avais donc quelque chose de produit, 3 phrases. Elle, rien.
+Tout ça pour dire que les méthodes agiles sont adaptées aux projets IT dans le sens où : - le client a une bonne visibilité sur le projet - il peut tester à tout moment le produit et changer les fonctionnalités en cours de projet - un produit est fourni au fur et à mesure
+Le lien avec Wakanda et JavaScript ?? Et bien je n’en vois pas.&lt;/p&gt;
+
+&lt;h4&gt;16.30 – 17.15 : Wakanda, AngularJS&lt;/h4&gt;
+
+&lt;p&gt;Cette conférence nous a permis de voir comment débuter simplement et rapidement avec AngularJS avec de simples exemples tels que l’éternel TODO List. Ce qui différencie ce framework client des autres vient surtout de son aspect fonctionnel. Une intégration à Wakanda a été apportée afin de rendre son utilisation simple et native (Support et autocomplétion disponible sous W. Studio).&lt;/p&gt;
+
+&lt;p&gt;Après une discussion post-talk très intéressante avec le speaker, j’apprends que Angular est également le seul framework client à pratiquer la technique du “dirty checking” (et non a implémenter le design pattern Observer) pour détecter les changements liés au modèle de données ou aux éléments du DOM. Cette technique, également utilisée dans l’univers du jeux vidéo, permet de mettre à jour les éléments modifiés sans forcément savoir la cause du changement ni le comment de la modification. Cela rend le système plus réactif.&lt;/p&gt;
+
+&lt;h2&gt;Journée du samedi – JavaScript everywhere&lt;/h2&gt;
+
+&lt;h4&gt;9:00 – 9:40 : Welcome – secured business web applications in the cloud&lt;/h4&gt;
+
+&lt;p&gt;3 points a retenir de cette présentation : 1 – Design for failure (Assume everything fails and design backward) 2 – Loosely coupled design (The looser the layers are coupled, the bigger they are scale) 3 – NoSQL DataBase (DynamoDB, low latency, seamless scalability, predictable performence)&lt;/p&gt;
+
+&lt;h4&gt;9:40 – 10:10 : The full javascript stack for business apps&lt;/h4&gt;
+
+&lt;p&gt;La présentation a débuté par la définition d’une business webapp : - un modèle de données - une logique métier - accès par client léger (navigateur web) - mise en place de sécurité - déploiement aisé
+Vint ensuite la citation de plusieurs technologies (dont certaines basées sur JavaScript) dont je vous laisserai faire quelques recherches si vous êtes intéressés : aptana, varnish, acegi, django, extjs, joyent, ql.io&lt;/p&gt;
+
+&lt;h4&gt;ArangoDB – Using javascript in the database&lt;/h4&gt;
+
+&lt;p&gt;ArangoDB peut se présenter comme une alternative intéressante à la solution aujourd’hui favorite de systèmes NoSQL à base d’execution JavaScript : MongoDB. Elle permet d’effectuer notamment des requêtes complexes via un langage “sql-like”. Il peut être défini en tant que DBServer ou en tant que Serveur d’application avec architecture REST gérant automatiquement les requêtes Http.&lt;/p&gt;
+
+&lt;h4&gt;OrientDB – Javascript-based nosql database&lt;/h4&gt;
+
+&lt;p&gt;OrientDB est également une alternative à MongoDB. Il garde cependant le langage natif SQL pour les requêtes complexes et permet de communiquer avec les clients et/ou avec le serveur entièrement et nativement en JSON. Le speaker a également projeté une architecture web Client – DBServer sans intermédiaire (serveur d’app). Il s’en dégageait alors notamment des problématiques d’accès concurrents et de sécurité, notamment vis à vis de l’exposition du code côté serveur.&lt;/p&gt;
+
+&lt;h4&gt;Testacular – The spectacular javascript test runner&lt;/h4&gt;
+
+&lt;p&gt;Testacular est un produit signé Google permettant de lancer de manière automatique des tests unitaires javascript. Il affiche le résultat des tests sur la console à partir de laquelle il sera lancé, mais également sur une page web si besoin. Une démo nous a été présentée avec l’outils Jasmine, favoris aujourd’hui des tests unitaires en javascript. Le speaker rappelle que Testacular reste un Test Runner et non un outil pour concevoir les tests.&lt;/p&gt;
+
+&lt;p&gt;Voici une présentation quasi similaire :&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/MVw8N3hTfCI?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h4&gt;Javascript – your new overlord&lt;/h4&gt;
+
+&lt;p&gt;Douglas Crockford, développeur actif JavaScript, créateur du format Json et de l’outil JsLint, nous a narré l’histoire du web liée à la technologie JavaScript. Très intéressante, je vous recommande chaudement de regarder cette conférence :
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/Trurfqh_6fQ?rel=0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;h4&gt;You want to do what with javascript !?!&lt;/h4&gt;
+
+&lt;p&gt;Cette présentation nous a montré qu’il était possible d’interagir avec des cartes électroniques en utilisant le langage javascript. Le speaker nous a fait une petite démo avec une webapp qui permettait à travers son interface de contrôler des LEDs situées sur la carte et de récupérer en temps réel les informations de ses capteurs.&lt;/p&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Ces 2 jours de conférence m’ont vraiment fait prendre conscience que le JavaScript est aujourd’hui présent sur beaucoup de plateformes différentes (pc, mobiles, console de salon, appareils électroniques) et possède un écosystème robuste. Je pense personnellement que son développement en est encore à son début et nous commençons à en découvrir les avantages. Bien qu’il ne soit pas forcément une solution pour tous les projets, il peut-être intéressant de s’y pencher un moment pour en découvrir ses bons côtés.
+Cela m’a également permis de rencontrer les créateurs de “Human Coders” (merci à Brice) ainsi que Vojta Jína travaillant dans l’équipe de développement AngularJS. 
+Un petit coucou également à Emmanuel Blonvia, Samuli Ulmanen, Ricardo Mello et Carl Ogren, tous développeurs js, avec qui j’ai passé un bon moment.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ParisJS 23 Conférence "Server Push Technologies – le bilan"</title>
+   <link href="http://hyde.getpoole.com/2012/11/07/parisjs-conference-server-push-technologies/"/>
+   <updated>2012-11-07T00:00:00+01:00</updated>
+   <id>http://hyde.getpoole.com/2012/11/07/parisjs-conference-server-push-technologies</id>
+   <content type="html">&lt;h2&gt;ParisJS 23&lt;/h2&gt;
+
+&lt;p&gt;Lors du dernier meeting ParisJS 23 qui se déroulait au siège de la société Ippon Technologies (Levallois-Perret), j’ai eu l’occasion de présenter la liste des technologies liées au server push ainsi que leurs implémentations au sein d’un serveur web node.js accompagné du framework express.js. &lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/8wjJTzh1GJQ&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Si jamais vous rencontrez un problème avec le lecteur vidéo, voici les liens directs &lt;a href=&quot;http://vimeo.com/53420138&quot;&gt;vimeo&lt;/a&gt; ou &lt;a href=&quot;http://www.youtube.com/watch?v=8wjJTzh1GJQ&quot;&gt;youtube&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Cette présentation a permis de faire un bilan sur l’efficacité de ces méthodes, leurs avantages et contraintes ainsi que de faire une ouverture sur les solutions comme les frameworks Atmosphere ou socket.io pour s’abstraire de la technologie employée et se concentrer sur le fonctionnel.&lt;/p&gt;
+
+&lt;h2&gt;Slides &amp;amp; sources&lt;/h2&gt;
+
+&lt;p&gt;Les slides sont disponibles &lt;a href=&quot;/public/docs/serverPushTechnologies.pdf&quot;&gt;ici&lt;/a&gt;&lt;br&gt;
+Les sources utilisées sont dispos sur mon &lt;a href=&quot;https://github.com/ebourmalo/server-push&quot;&gt;repository github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;J’espère que cette présentation vous aura plue et n’hésitez pas à laisser un commentaire, cela fait toujours plaisir et motive pour de futures prez &lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Server Push Technologies, le bilan</title>
+   <link href="http://hyde.getpoole.com/2012/11/05/server-push-technologies-le-bilan/"/>
+   <updated>2012-11-05T00:00:00+01:00</updated>
+   <id>http://hyde.getpoole.com/2012/11/05/server-push-technologies-le-bilan</id>
+   <content type="html">&lt;p&gt;Aujourd’hui, le système d’information d’une entreprise est capital. Il permet la compréhension et le bon fonctionnement de la logique métier à travers ses différents acteurs. L’information doit donc être partagée pour tous les acteurs (et corps de métier) afin d’assurer une bonne communication.
+Pour répondre à ce besoin, les solutions informatiques proposent leurs services à partir d’une architecture distribuée. Chaque client envoie une requête à un serveur web (central) qui communique la plupart du temps avec une base de données, où sont stockées les informations et effectue des traitements sur celles-ci. La base de données peut être locale (elle se situe directement sur le serveur web) ou externe (elle se situe sur un autre serveur dédié à son usage). Il s’agit dans ce dernier cas d’architecture 3-tiers. Une fois les traitements effectués, le serveur peut renvoyer le rendu généré aux différents clients.    Les informations sont alors actualisées à chaque requête que le client envoie au serveur. Cet événement est matérialisé sous forme de rafraichissement de la page sur le navigateur web. Il s’agit du mode synchrone puisque le navigateur client reste en attente de la réponse du serveur avant de continuer ses opérations.
+Avec l’avancée des technologies, la demande du marché a également évolué. En effet, la diffusion de l’information est essentielle mais que se passe-t-il si elle est amenée à être modifiée constamment par différents acteurs ?
+Etudions le cas suivant : un client demande au serveur d’obtenir une information, quelle qu’elle soit. Le serveur lui envoie à un instant T0. Supposons que l’information soit modifiée à un instant T1, quelques secondes après T0, nous pouvons constater 2 choses :
+* l’information que le client reçoit et conserve devient obsolète en quelques secondes
+* Si cette information est manipulée et enregistrée par ce même client, la version la plus récente de l’information sera écrasée inconsciemment
+Une des solutions à la problématique du deuxième point réside en l’implémentation de la concurrence optimiste mais elle ne résout pas la problématique soulevée au premier point. Nous nous concentrerons donc sur cet axe.&lt;/p&gt;
+
+&lt;h2&gt;L’émergence d’un nouveau besoin&lt;/h2&gt;
+
+&lt;p&gt;Tout en conservant le concept précédent, le nouveau besoin réside dans le délai de la diffusion de l’information. Nous en venons au concept d’information temps réel afin de garantir constamment la bonne validité de l’information à chaque client. Dans le domaine informatique, le concept de temps réel est abstrait. Il s’agit d’un délai de temps suffisamment petit pour le confondre avec la notion d’instantanéité. Dans le cas concret, les délais constatés sont de l’ordre du dixième de secondes, expliqué par le temps d’acheminement de l’information à travers les différentes architectures réseaux d’Internet.
+Dans le schéma suivant, les étapes 4 et 5 représentent la demande de mise à jour en mode asynchrone. La page est déjà affichée (étapes 1, 2 et 3 en mode synchrone) et l’on demande lors de certains évènements un rafraichissement des données uniquement.&lt;/p&gt;
+
+&lt;h2&gt;Problématique&lt;/h2&gt;
+
+&lt;p&gt;Au sein d’une application distribuée, il existe aujourd’hui des solutions afin de partager l’information en temps réel pour les différents utilisateurs. Seulement, les contraintes que cette mise en place exige ne sont pas négligeables. D’une part, une importante quantité de bande passante est utilisée en continue afin de garantir l’intégrité et la disponibilité de l’information. D’autre part, lors d’une montée en charge de plusieurs dizaines de milliers d’utilisateurs, nous constatons que l’architecture ne convient plus.
+Comment optimiser la bande passante de ce genre d’architecture tout en gardant le concept de l’information temps réel et pouvoir supporter une charge conséquente d’utilisateurs ?
+Nous présenterons les différentes solutions existantes avec leurs avantages et inconvénients afin d’étudier la solution la plus adaptée. L’étude sera cadrée sur les technologies web dans le cadre de la communication entre les clients et le serveur.
+Solutions&lt;/p&gt;
+
+&lt;p&gt;Nous allons étudier les deux types de technologies web existantes pour mettre en place des solutions web temps réel : celles basées sur le protocole HTTP et celle basée sur le protocole WebSocket.&lt;/p&gt;
+
+&lt;h2&gt;Http-based solutions&lt;/h2&gt;
+
+&lt;h3&gt;Polling&lt;/h3&gt;
+
+&lt;p&gt;Le polling est la technique la plus simple à mettre en place. Elle consiste à envoyer des requêtes asynchrones au serveur à intervalles réguliers (toutes les n secondes) afin d’avoir l’information synchronisée. Plus l’intervalle sera petit, plus on se rapproche de la notion de temps réel et plus on garantie la validité de l’information. Il est important de noter qu’à chaque envoi de requête au serveur, celui-ci renvoie immédiatement l’information voulue.&lt;/p&gt;
+
+&lt;h4&gt;Avantages :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Risque d’obsolescence de l’information sur un court délai
+ * Compatible avec tous les navigateurs web&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Contraintes :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ouvre une connexion avec le serveur à chaque requête &lt;/li&gt;
+&lt;li&gt;Le serveur renvoie les données dans tous les cas (modifiées ou non) : consommation de bande passante inutile&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Long Polling&lt;/h3&gt;
+
+&lt;p&gt;Le long polling, long-held HTTP request de son vrai nom, reprend les mêmes principes que le polling tout en présentant deux différences.
+La première, se rencontre côté client. Le délai des requêtes est supprimé afin de maintenir une connexion active avec le serveur en permanence. Dès que la connexion est fermée, une requête est instantanément renvoyée au serveur afin d’en ouvrir une nouvelle. Une connexion persistante est ainsi simulée à travers plusieurs connexions « micro-interrompues ».
+La seconde, côté serveur, intervient lors de la réception d’une requête client. A travers une boucle, les données  sont uniquement renvoyées lorsqu’elles sont différentes de celles du client. Un changement a donc été détecté. Il est également possible de fixer une durée maximale pendant laquelle, si aucun changement n’est détecté, le serveur renverra une réponse pour fermer la connexion.
+Dans tous les cas, une connexion reste ainsi toujours active avec le client jusqu’à lui envoyer les nouvelles informations.    &lt;/p&gt;
+
+&lt;h4&gt;Avantages :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;L’information est synchronisée en temps réel &lt;/li&gt;
+&lt;li&gt;Economie sur la bande passante (on envoie uniquement les informations si elles ont subies des modifications) &lt;/li&gt;
+&lt;li&gt;Compatible avec tous les navigateurs web&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Contraintes :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Le serveur effectue plus de traitements qu’avec le polling (traitement constant pour vérifier si l’utilisateur possède la dernière version) &lt;/li&gt;
+&lt;li&gt;Le serveur peut vite être surchargé par une charge d’utilisateurs moyenne&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Http Streaming&lt;/h3&gt;
+
+&lt;p&gt;Le HTTP Streaming (également appelé ajax multipart streaming) est une technologie qui permet de garder une seule et même connexion active avec le serveur grâce à la fonctionnalité « keep-alive » du protocole HTTP 1.1. Il s’agit de l’utilisation des connexions persistantes.
+Le client envoie tout d’abord une requête initiale asynchrone qui permettra l’ouverture de la connexion. Le serveur renvoie alors une réponse qu’il met à jour continuellement lorsqu’il en a besoin et ne la ferme jamais.
+Une alternative consiste à envoyer une requête asynchrone avec le paramètre multipart définit à true. La réponse pourra alors utiliser le paramètre content-type définit sur multipart/x-mixed-replace et permettra d’envoyer en continue les données. Attention cependant, seuls les navigateurs avec le moteur de rendu Gecko (firefox) disposent de cette fonctionnalité.
+On notera également que la technologie Pushlet, qui propose les mêmes fonctionnalités, est basée sur cette technique. Elle reste cependant appliquée au milieu Java (Pushlet est la compression de Push server et Servlet).
+Etant donné que cette technologie utilise le protocole http, la connexion établie est unidirectionnelle (push serveur uniquement). Le client ne peut donc pas à travers cette connexion envoyer d’informations au serveur.&lt;/p&gt;
+
+&lt;h4&gt;Avantages :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Optimisation de la bande passante : seules les informations utiles sont envoyées &lt;/li&gt;
+&lt;li&gt;Réception des informations en temps réel + Une seule connexion établie avec le serveur&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Contraintes :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Le serveur effectue plus de traitements qu’avec le polling (traitements constant pour vérifier si ses informations sont à jour) &lt;/li&gt;
+&lt;li&gt;Internet Explorer ne supporte pas cette technologie. Celui-ci attend la réponse complète du serveur pour pourvoir l’exploiter. &lt;/li&gt;
+&lt;li&gt;Certains proxy utilisent le buffering rendant inexploitable cette technique&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Server-Sent Event&lt;/h3&gt;
+
+&lt;p&gt;Le Server-Sent Event (appelé SSE) est une spécification implémentée dans le package HTML5 sous le nom de « Event Source ». Contrairement aux technologies précédentes, le serveur peut ici envoyer des données au client n’importe quand et ce, sans aucun appel/requête initial du client. Les informations à jour peuvent donc être streamées en temps réel. En réalité, un délai de 3 secondes est constaté entre l’évènement déclencheur du serveur et la réception côté client. Ce délai est conseillé pour avoir le meilleur compromis bande passante / synchronisation temps réel mais peut être modifié.
+Il s’agit ici d’un canal unidirectionnel du serveur vers le client. La différence notable par rapport au http Streaming est donc le support natif du navigateur. Le client écoute naturellement (sans demande) les messages du canal.  
+Pour résumer, une application cliente s’abonne à un flux d’informations temps réel généré par le serveur qui, dès qu’un événement survient, lui envoie une notification. Un nombre indéfini de clients peut s’inscrire sur ce même flux.
+Le paramètre content-type de la réponse est de type text/event-stream, nouveauté insérée avec HTML5.&lt;/p&gt;
+
+&lt;h4&gt;Avantages :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fonctionnalité de reconnexion automatique + Peu de ressources utilisées (implémenté nativement dans le navigateur) &lt;/li&gt;
+&lt;li&gt;Peu consommateur de bande passante&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Contraintes :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Canal unidirectionnel &lt;/li&gt;
+&lt;li&gt;Non compatible avec tous les navigateurs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;WebSocket-based solution&lt;/h2&gt;
+
+&lt;p&gt;Une websocket est une technologie plus récente utilisant une seule connexion TCP (socket) et répondant aux problématiques de simulation de temps réel précédemment citées dû au protocole http :
+* Envoi de requêtes et de réponses http impliquant l’envoi inutile d’informations redondantes (headers http) ainsi qu’une latence 
+* Simulation d’une connexion full duplex client-serveur possible via la création de deux connexions distinctes complexes à synchroniser. Il y a donc une surcharge de la bande passante entrainant une charge excessive pour le serveur avec un nombre conséquent de clients.
+Le protocole http n’a initialement pas été créé pour de la communication temps réel entre le client et le serveur. C’est pourquoi les websockets utilisent leur propre protocole afin de répondre à ce besoin :
+* Communication en temps réel des informations entre le client et le serveur (full duplex) 
+* Les informations circulant sur le réseau sont uniquement des données utiles : maitrise de la bande passante
+Le protocole a été standardisé par l’IETF et l’api a été standardisé par HTML5.&lt;/p&gt;
+
+&lt;h4&gt;Avantages :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Canal full duplex pour la communication entre le serveur et le client &lt;/li&gt;
+&lt;li&gt;Envoi de données utiles uniquement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Contraintes :&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Peu de navigateurs &lt;/li&gt;
+&lt;li&gt;Souvent bloqué par des proxy ou des routeurs dans les entreprises &lt;/li&gt;
+&lt;li&gt;Echange constant de requêtes sur le canal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;La technologie Server-Sent Event semble aujourd’hui la plus adaptée afin de répondre aux problématiques de la bande passante et d’une charge conséquente d’utilisateurs.
+Face aux problématiques de la compatibilité au niveau des navigateurs, certains frameworks proposent l’échange automatique de la technologie de manière  totalement transparente pour le développeur et l’utilisateur. En effet, le framework va utiliser la technologie la plus adaptée à l’environnement sur lequel il est utilisé. Tout d’abord, il va tester si la technologie WebSocket est supportée. Sinon, il testera le Server-Sent Event, et ainsi de suite jusqu’à utiliser le long-polling si nécessaire.
+Les tendances actuelles semblent malgré tout converger vers une seule et même technologie : le WebSocket. Tout l’éco-système (matériel et logiciel) empêchant actuellement son utilisation sera mis à jour afin d’en bénéficier. Elle est également adoptée par de plus en plus de sites web de référence.&lt;/p&gt;
+
+&lt;p&gt;Les technologies Push server sont intéressantes pour transmettre de l’information aux clients lors d’un événement côté serveur mais qu’en est-il de la communication avec la base de données ? L’information provenant la plupart du temps d’une base, il existe les mêmes problématiques qu’avec celles du client et le serveur.
+Si nous définissons la base de données en tant que source de données,  il existe des solutions permettant d’avertir le serveur en cas de modifications des données à partir de la base, sans qu’elle soit interrogée. Cette dernière envoie alors un message (une notification) au serveur via un MOM lui annonçant une modification. Par exemple, une base Oracle peut utiliser la technologie JMS pour avertir un serveur.&lt;/p&gt;
+
+&lt;p&gt;Pour résumer, le serveur de base de données avise le serveur applicatif que l’information a changé en l’envoyant aux clients. Le partage de l’information se fait donc via le serveur de base de données. L’événement initial responsable du déclenchement de la mise à jour de l’information est donc la modification de l’information elle-même. Cela permet, d’une part, d’utiliser un minimum de bande passante concernant l’architecture réseau et d’autre part, de pouvoir supporter une charge conséquente d’utilisateurs puisque l’architecture de l’application est totalement orientée évènement. Des requêtes ne sont alors plus envoyées en permanence afin de vérifier si des modifications ont été effectuées.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

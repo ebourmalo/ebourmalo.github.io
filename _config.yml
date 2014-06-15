@@ -1,0 +1,24 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Emmanuel Bourmalo
+tagline:          'Javascript dev thoughts'
+description:      'Js developer <a href="http://iadvize.com" target="_blank">@iAdvize</a><br>Javascript expert and real time enthusiast.<br>KISS and DRY philosopher'
+url:              http://hyde.getpoole.com
+
+author:
+  name:           'Emmanuel Bourmalo'
+  url:            https://twitter.com/ebourmalo
+
+paginate:         5
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/ebourmalo
