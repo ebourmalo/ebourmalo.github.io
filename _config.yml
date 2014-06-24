@@ -7,8 +7,8 @@ permalink:        pretty
 
 # Setup
 title:            Emmanuel Bourmalo
-tagline:          'Javascript dev thoughts'
-description:      'Js developer <a href="http://iadvize.com" target="_blank">@iAdvize</a><br>Javascript expert and real time enthusiast.<br>KISS and DRY philosopher'
+tagline:          'Some dev thoughts'
+description:      'Javascript engineer <a href="http://iadvize.com" target="_blank">@iAdvize</a><br>Javascript and real time enthusiast.<br>KISS and DRY philosopher'
 url:              http://hyde.getpoole.com
 
 author:
