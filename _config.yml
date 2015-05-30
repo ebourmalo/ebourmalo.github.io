@@ -11,7 +11,11 @@ description: > # this means to ignore newlines until "email:"
 
 email: emmanuel.bourmalo@gmail.com
 #blog logo
-logo: "/assets/images/avatar.png"
+logo: "/assets/images/logo.png"
+
+#navigation logo
+logo_nav: "/assets/images/avatar.png"
+
 # blog cover
 cover: "/assets/images/computer-code-blue-background.jpg"
 
