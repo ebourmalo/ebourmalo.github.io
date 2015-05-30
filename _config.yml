@@ -1,24 +1,59 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+gems:
+  - jemoji
 
-# Permalinks
-permalink:        pretty
+# Site settings
+title: "Dev thoughts"
+description: > # this means to ignore newlines until "email:"
+   From Emmanuel Bourmalo
 
-# Setup
-title:            Emmanuel Bourmalo
-tagline:          'Javascript dev thoughts'
-description:      'Javascript engineer <a href="http://iadvize.com" target="_blank">@iAdvize</a><br>Javascript and real time enthusiast.<br>KISS and DRY philosopher'
-url:              http://hyde.getpoole.com
+email: emmanuel.bourmalo@gmail.com
+#blog logo
+logo: "/assets/images/avatar.png"
+# blog cover
+cover: "/assets/images/computer-code-blue-background.jpg"
 
-author:
-  name:           'Emmanuel Bourmalo'
-  url:            https://twitter.com/ebourmalo
+name: 'Emmanuel Bourmalo'
+author: 'Emmanuel Bourmalo'
+author_description: 'Javascript expert and real-time ethusiast. Addict to KISS principle'
+author_image: "/assets/images/author.png"
 
-paginate:         5
+paginate:	5
 
-# Custom vars
-version:          2.0.0
+url: "http://ebourmalo.github.io" # the base hostname & protocol for your site
+baseurl: ""
 
-github:
-  repo:           https://github.com/ebourmalo
+#fill in disqus shortname to use disqus
+disqus: ebourmalo
+
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/ebourmalo
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+#  - icon:	facebook
+#    url:	https://facebook.com/???
+#    desc: Connect with me facebook
+#    share_url: https://www.facebook.com/sharer.php
+#    share_title: ?t=
+#    share_link: "&amp;u="
+
+  - icon:	github
+    url:	https://github.com/ebourmalo
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+#  - icon:	google-plus
+#    url:	https://google.com/???
+#    desc:	Add me on google+
+#    share_url:
+#    share_title:
+#    share_link:

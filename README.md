@@ -1,1 +1,2 @@
-# www.jsintime.com website
+My personal blog
+================
