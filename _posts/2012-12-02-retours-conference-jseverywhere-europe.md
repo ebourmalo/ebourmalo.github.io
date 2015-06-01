@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Retours sur la conférence js.everywhere(europe) 2012
+
+title: La conférence js.everywhere 2012
+subtitle: "Présentation de Wakanda"
+
+image: post_jseverywhere.png
 ---
 
-## La conférence
-
-La conférence js.everywhere(europe) s’est déroulée le vendredi 16 et le samedi 17 novembre au Tapis rouge, dans le 10ème arrondissement de Paris. Organisée par la société 4D, la première journée était destinée à faire découvrir son nouveau produit : Wakanda. La seconde journée était quant à elle réservée aux présentations des technologies liées au JavaScript.
+La conférence js.everywhere(europe) s’est déroulée le vendredi 16 et le samedi 17 novembre au Tapis rouge, dans le 10ème arrondissement de Paris. Organisée par la société 4D, la première journée était destinée à faire découvrir son nouveau produit : Wakanda. <!-- more -->La seconde journée était quant à elle réservée aux présentations des technologies liées au JavaScript.
 Waka quoi ?
 Wakanda est le nouveau produit développé par 4D, une entreprise connue pour son précédent produit également appelé 4D. Wakanda est, comme sans prédécesseur, une plateforme de developpement All-in-one permettant de développer rapidement des Business Webapp avec une stack full js. 
 Cette plateforme comprend :

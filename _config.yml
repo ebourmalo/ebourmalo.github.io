@@ -1,63 +1,122 @@
-# Build settings
-markdown: redcarpet
+inc:
+  # Blog Information
+  title:        "Dev thoughts"
+  subtitle:     "Web development, new ideas & more"
+  cover_image:  blog-cover.jpg
+  logo:         logo.png
+
+  # Author information
+  author:
+    name: Emmanuel Bourmalo
+    link: jsintime.com
+    twitter: ebourmalo
+    gplus: 100687498195339762535
+    bio: Javascript expert and real-time enthusiast
+    image: profile.png
+
+  show_author_thumbnails: false
+
+  # Company information
+  company:      jsintime
+  url:          http://jsintime.com/
+  #facebook:     sendtoinc
+  twitter:      ebourmalo
+  linkedin:     ebourmalo
+  github:       ebourmalo
+  #rss:          enable
+  gplus:        '101183822199340201470'
+  about_link:   /about/
+
+  # Product Information
+  #product_link: http://incorporated.sendtoinc.com/
+  #tagline:      "Get a modern blog for your company"
+
+  # Comments
+  disqus:
+    # Eg. "exampleblog" Set to false to disable comments
+    shortname:  ebourmalo
+
+  # Sharing settings
+  sharing:
+    twitter:    true
+    facebook:   false
+    gplus:      false
+    hn:         false
+
+ # Analytics     
+  analytics:
+    google: true # Add tracking code in _includes/_google-analytics.html
+
+  # Google Fonts
+  # eg. 'Droid+Sans:400,700|Droid+Serif:400,700'
+  google_font: 'Droid+Sans:400,700'
+
+  # Setup your fonts, colors etc at _assets/stylesheets/main.scss
+
+url:         http://jsintime.com/
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+include:     ['.htaccess']
+exclude:     []
+timezone:    nil
+
+# Show future posts
+future:      false
+show_drafts: nil
+limit_posts: 0
 highlighter: pygments
-gems:
-  - jemoji
 
-# Site settings
-title: "Dev thoughts"
-description: > # this means to ignore newlines until "email:"
-   From Emmanuel Bourmalo
+relative_permalinks: true
 
-email: emmanuel.bourmalo@gmail.com
-#blog logo
-logo: "/assets/images/logo.png"
+permalink:     pretty
+paginate_path: 'page:num'
+paginate: 10
 
-#navigation logo
-logo_nav: "/assets/images/avatar.png"
+markdown:      kramdown
+markdown_ext:  markdown,mkd,mkdn,md
+textile_ext:   textile
 
-# blog cover
-cover: "/assets/images/computer-code-blue-background.jpg"
+excerpt_separator: "<!-- more -->"
 
-name: 'Emmanuel Bourmalo'
-author: 'Emmanuel Bourmalo'
-author_description: 'Javascript expert and real-time ethusiast. Addict to KISS principle'
-author_image: "/assets/images/author.png"
+safe:        false
+host:        0.0.0.0
+port:        4000
+baseurl:     /
+lsi:         false
 
-paginate:	5
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
 
-url: "http://ebourmalo.github.io" # the base hostname & protocol for your site
-baseurl: ""
+rdiscount:
+  extensions: []
 
-#fill in disqus shortname to use disqus
-disqus: ebourmalo
+redcarpet:
+  extensions: []
 
-# social icons and sharing options
-social:
-  - icon:	twitter
-    url:	https://twitter.com/ebourmalo
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
 
-#  - icon:	facebook
-#    url:	https://facebook.com/???
-#    desc: Connect with me facebook
-#    share_url: https://www.facebook.com/sharer.php
-#    share_title: ?t=
-#    share_link: "&amp;u="
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
 
-  - icon:	github
-    url:	https://github.com/ebourmalo
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
+redcloth:
+  hard_breaks: true
 
-#  - icon:	google-plus
-#    url:	https://google.com/???
-#    desc:	Add me on google+
-#    share_url:
-#    share_title:
-#    share_link:
+sass:
+    style: :compressed

@@ -1,11 +1,14 @@
 ---
 layout: post
-title: ParisJS 23 Conférence "Server Push Technologies – le bilan"
+
+title: ParisJS 23 @ Ippon Technologies
+subtitle: "Présentation Server Push Technologies"
+
+image: post_parisjs.png
 ---
 
-## ParisJS 23
 
-Lors du dernier meeting ParisJS 23 qui se déroulait au siège de la société Ippon Technologies (Levallois-Perret), j’ai eu l’occasion de présenter la liste des technologies liées au server push ainsi que leurs implémentations au sein d’un serveur web node.js accompagné du framework express.js. 
+Lors du dernier meeting ParisJS 23 qui se déroulait au siège de la société Ippon Technologies (Levallois-Perret), j’ai eu l’occasion de présenter la liste des technologies liées au server push ainsi que leurs implémentations à l'aide d’un serveur web node.js aidé du framework express. <!-- more -->
 
 
 
@@ -21,4 +24,4 @@ Cette présentation a permis de faire un bilan sur l’efficacité de ces métho
 Les slides sont disponibles [ici](/public/docs/serverPushTechnologies.pdf)  
 Les sources utilisées sont dispos sur mon [repository github](https://github.com/ebourmalo/server-push)
 
-J’espère que cette présentation vous aura plue et n’hésitez pas à laisser un commentaire, cela fait toujours plaisir et motive pour de futures prez 
+J’espère que cette présentation vous aura plu et n’hésitez pas à laisser un commentaire, cela fait toujours plaisir et motive pour de futures prez 

@@ -1,9 +1,15 @@
 ---
 layout: post
-title: Server Push Technologies, le bilan
+
+title: Server Push Technologies
+subtitle: "Le bilan"
+
+image: post_serverPushTechnologies.jpg
 ---
 
-Aujourd’hui, le système d’information d’une entreprise est capital. Il permet la compréhension et le bon fonctionnement de la logique métier à travers ses différents acteurs. L’information doit donc être partagée pour tous les acteurs (et corps de métier) afin d’assurer une bonne communication.
+
+Aujourd’hui, le système d’information d’une entreprise est capital. Il permet la compréhension et le bon fonctionnement de la logique métier à travers ses différents acteurs. L’information doit donc être partagée pour tous les acteurs (et corps de métier) afin d’assurer une bonne communication. <!-- more -->
+
 Pour répondre à ce besoin, les solutions informatiques proposent leurs services à partir d’une architecture distribuée. Chaque client envoie une requête à un serveur web (central) qui communique la plupart du temps avec une base de données, où sont stockées les informations et effectue des traitements sur celles-ci. La base de données peut être locale (elle se situe directement sur le serveur web) ou externe (elle se situe sur un autre serveur dédié à son usage). Il s’agit dans ce dernier cas d’architecture 3-tiers. Une fois les traitements effectués, le serveur peut renvoyer le rendu généré aux différents clients.    Les informations sont alors actualisées à chaque requête que le client envoie au serveur. Cet événement est matérialisé sous forme de rafraichissement de la page sur le navigateur web. Il s’agit du mode synchrone puisque le navigateur client reste en attente de la réponse du serveur avant de continuer ses opérations.
 Avec l’avancée des technologies, la demande du marché a également évolué. En effet, la diffusion de l’information est essentielle mais que se passe-t-il si elle est amenée à être modifiée constamment par différents acteurs ?
 Etudions le cas suivant : un client demande au serveur d’obtenir une information, quelle qu’elle soit. Le serveur lui envoie à un instant T0. Supposons que l’information soit modifiée à un instant T1, quelques secondes après T0, nous pouvons constater 2 choses :
