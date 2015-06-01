@@ -53,7 +53,7 @@ inc:
 
   # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 
-url:         http://jsintime.com/
+url:         http://jsintime.com
 source:      .
 destination: ./_site
 plugins:     ./_plugins
