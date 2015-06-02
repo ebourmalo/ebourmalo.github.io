@@ -291,3 +291,36 @@ a {
         background:none;
     }
 }
+
+
+.right {
+    float: right;
+    margin-left: 15px;
+}
+
+.left {
+    float: left;
+    margin-right: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.width100 {
+    width: 100px;
+}
+
+.width150 {
+    width: 150px;
+}
+
+.width200 {
+    width: 200px;
+}
+
+.profile {
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 5%;
+}
