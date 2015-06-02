@@ -8,17 +8,20 @@ image: post_google.png
 ---
 
 ![](/images/googleInterview_logo.jpg)
+
 Nous sommes en 2012. J'ai toujours été très curieux et je me demandais comment se passait le recrutement chez Google. Je pense ne pas être le seul
 à m'interroger sur le sujet :) <!-- more -->
 Ce fameux process qui, d'après de nombreux ouï-dires, prend des semaines et se présente sous différentes formes. 
 Bref, après avoir demandé à tous mes contacts, personne ne l'avait essayé. 
 
+![](/images/angular.png){: .right .width100}
 En participant à une conférence technique à Paris, je rencontre Vojta Jina qui travaille pour Google dans l'équipe Angular (nouveau kid on the block des frameworks js).
 Après de bonnes heures de discussion, il m'invite à postuler pour rejoindre Google. Il me propose de donner mon adresse email à un recruteur 
 si je suis intéressé, ce que j'accepte volontier. Après tout, je n'ai rien à perdre et ce sera une bonne expérience. 
 
 ## Premier round
 
+![](/images/googleInterview_call.jpg){: .left .width150}
 Je reçois un premier email d'un recruteur Google de Londres une semaine après. On convient d'une date pour un RDV téléphonique.
 Le jour J arrive et voilà, le téléphone sonne. Inutile de vous précisez que l'échange se fait en anglais.
 Le recruteur se présente et me dit comment va se passer l'échange. 
@@ -30,8 +33,11 @@ C'est à mon tour de me présenter et de décrire mon parcours professionnel.
 - La différence entre un noeud DOM définit en `display: none` et un autre définit en `visibility: hidden`
 - Qu'est ce qu'une closure dans un contexte javascript et comment en créér une
 
+{: .center}
+![](/images/front-end.png){: .width200}
+
 Si vous n'avez pas les réponses, je vous laisse Googler ça. Mon constat était de voir que ces premières questions étaient très "de surface"
-et couvrait rapidement l'environnement front-end (compréhension générale du web, feuilles de style CSS et javascript).
+et couvraientt rapidement l'environnement front-end (compréhension générale du web, feuilles de style CSS et javascript). *Elles permettent de faire une première sélection sur les candidats.*
 
 Le recruteur me dit que j'aurai rapidement des nouvelles et me remercie pour l'entretien. 
 
@@ -49,6 +55,7 @@ S'en suit de quelques questions pour compléter mon CV et me remercie pour l'éc
 
 ## Troisième round
 
+![](/images/google_docs.png){: .right .width100}
 Il m'annonce le jour d'après que je vais pouvoir passer un entretien technique avec un développeur front-end.
 Cet entretien s'est fait par Google Hangout avec une session de live coding via un Google doc.
 Le développeur se présente, développeur front-end sur Youtube.
@@ -68,21 +75,24 @@ Il me demande dans un premier temps d'écrire le code HTML en expliquant mon ré
 
 Un bout de ce que j'ai écrit:
 
-{% highlight html %}
-<div id=”div_panelMusic”>
-    <ul id=”ul_musicElement”>
+<figure>
+  <figcaption>File: folderName/fileName.rb</figcaption>
+{% highlight html linenos %}
+<div id="div_panelMusic">
+    <ul id="ul_musicElement">
     
-    {$ items.forEach(index, musicItem, array) $}
-        <li id=”{$musicItem.id$}” class=”li_musicItem”>
+    {{ items.forEach(index, musicItem, array) }}
+        <li id="{$musicItem.id$}" class="li_musicItem">
             <h2>{$musicItem.name$}</h2>
-            <img src=”{$musicItem.webPath$}” alt=”{$musicItem.altDesc$}” 
-                 title=”{$musicItem.title$}” />
+            <img src="{$musicItem.webPath$}" alt="{$musicItem.altDesc$}" 
+                 title="{$musicItem.title$}" />
         </li>
     {$ end forEach $}
 
     </ul>
 </div>
 {% endhighlight %}
+</figure>
 
 Quelques questions générales m'ont également été posées sur le HTML:
 
@@ -130,19 +140,20 @@ Un autre bout de ce que j'ai écrit:
 
 Puis il me demande, sans l'écrire, comment je gérerais la partie javascript.
 
+![](/images/mime.png){: .right .width100}
 Finalement, il me remercie, me demande si j'ai des question et me dit de passer le bonjour à Mime. A ce stade, j'y voyais deux significations. 
 La première, que j'avais raté le test car je n'avais pas parlé du Mime Type.
 La seconde, que j'allais rencontré un développeur qui s'appelle Mime.
-Je pariai pour la première et j'avais tord =)
+Je pariais pour la première et j'avais tord =)
 
 ## Quatrième round
 
 Je reçois quelques temps après un email d'un nouveau Googler, m'invitant à passer une journée de tests 
 aux bureaux parisiens avec l'équipe travaillant actuellement sur le projet.
 
-### entretien avec le Tech lead front-end
+### entretien front-end
 
-Les choses suivantes me sont demandées, en étant le plus précis possible:
+Je rencontre le tech lead front-end. Les choses suivantes me sont demandées, en étant le plus précis possible:
 
 ***Décrire le process de bout en bout quand un utilisateur tappe www.google.com sur son navigateur***
 
@@ -203,9 +214,9 @@ xhr.get(10, function (result) {
 });
 {% endhighlight %}
 
-### entretien avec un développeur front-end 
+### entretien UI
 
-Après la séance de présentation, nous débutons l'entretien.
+Après la séance de présentation avec un développeur front-end, nous débutons l'entretien.
 
 ***Que signifie en css le sélecteur suivant:***
 {% highlight css %}
@@ -225,7 +236,9 @@ Si on est arrivé à la dernière musique et que l'on navigue au clavier pour la
 ***Exercice:*** Ecrire la partie HTML correspondante ainsi que le code javascript nécessaire.
 
 
-### entretien avec le Tech lead back-end 
+### entretien back-end 
+
+Je rencontre cette fois le tech lead back-end du projet.
 
 ***Scénario:*** On dispose des 2 fonctions définies ci-dessous
  
@@ -266,9 +279,9 @@ de connexions arrivent en simultanné.
 Optimisations, caches, virtualisation pour scaler automatiquement et rapidement
 
 
-### entretien avec le UX developer
+### entretien UX
 
-Petite particularité pour cet échange, je l'ai fait via Hangout. Mon interlocuteur était en Allemagne :) 
+Petite particularité pour cet échange, je l'ai fait via Hangout. Mon interlocuteur, UX developer UX, était en Allemagne :)
 
 ***Scénario:*** Imaginons que tu travailles sur google maps. Tu dois développer une nouvelle fonctionnalité.
 A partir d'un champ de texte, on saisit un pays. L'application doit pouvoir mettre en surbrillance ce pays 
@@ -277,6 +290,9 @@ et mettre un voile noir (layout shadow) tout autour.
 ***Questions:*** *Comment implémenter cette fonctionnalité de manière précise ?*
 
 Récupérer les coordonnées, utiliser SVG ou canvas, bind évènement js..
+
+
+![](/images/googleInterview_login.png){: .aaa .bbb}
 
 ***Scénario:*** Imaginons un écran de connexion demandant un couple login / password. 
 Le User doit obligatoirement utiliser son adresse email en tant que login.
